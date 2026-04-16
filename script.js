@@ -1,40 +1,94 @@
-const weddingDate = new Date("May 18, 2026 00:22:00").getTime();
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #fff, #f8f5f0);
+    text-align: center;
+}
 
-setInterval(function () {
-    const now = new Date().getTime();
-    const diff = weddingDate - now;
+/* OPEN SCREEN */
+#opening {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    if (diff < 0) {
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("mins").innerText = "00";
-        return;
-    }
+.open-box h1 {
+    font-family: 'Great Vibes', cursive;
+}
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((diff / (1000 * 60)) % 60);
+/* MAIN CARD */
+.container {
+    max-width: 380px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    animation: fadeUp 1.5s ease;
+}
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("mins").innerText = mins;
+/* TEXT */
+.top-text {
+    font-size: 12px;
+    color: #888;
+}
 
-}, 1000);    display: inline-block;
+.names {
+    font-family: 'Great Vibes', cursive;
+    color: #8B0000;
+    font-size: 36px;
+}
+
+.heart {
+    color: gold;
+}
+
+.invite {
+    font-size: 14px;
+}
+
+/* DATE BOX */
+.date-box {
+    border: 1px solid gold;
     padding: 10px;
-    margin: 15px 0;
+    margin: 15px;
     border-radius: 10px;
 }
 
-.date-box .big {
-    font-size: 28px;
-    color: #2f4f2f;
+/* COUNTDOWN */
+.countdown {
+    display: flex;
+    justify-content: space-around;
 }
 
-.time, .venue {
-    font-size: 14px;
-    margin: 5px 0;
+.countdown div {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
 }
 
+/* BUTTONS */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+}
+
+.yes { background: #4CAF50; color: white; }
+.no { background: #e74c3c; color: white; }
+.whatsapp { background: #25D366; color: white; width: 80%; }
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
 .countdown {
     display: flex;
     justify-content: center;
