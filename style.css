@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background: #fffaf5;
+}
+
+.names {
+    font-family: 'Great Vibes', cursive;
+    color: darkred;
+    font-size: 32px;
+}
+
+.highlight {
+    margin-top: 10px;
+    font-weight: bold;
+}
