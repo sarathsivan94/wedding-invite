@@ -1,40 +1,25 @@
-body {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    background: linear-gradient(#fff, #f9f3f0);
-    text-align: center;
-}
+const weddingDate = new Date("May 18, 2026 00:22:00").getTime();
 
-.container {
-    padding: 30px 20px;
-    animation: fadeIn 2s ease;
-}
+setInterval(function () {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
 
-.top-text {
-    font-size: 12px;
-    color: #777;
-}
+    if (diff < 0) {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("mins").innerText = "00";
+        return;
+    }
 
-.names {
-    font-family: 'Great Vibes', cursive;
-    color: #8B0000;
-    font-size: 34px;
-    margin: 5px 0;
-}
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
 
-.heart {
-    font-size: 20px;
-    color: #8B0000;
-}
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("mins").innerText = mins;
 
-.invite {
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-.date-box {
-    border: 1px solid #ddd;
-    display: inline-block;
+}, 1000);    display: inline-block;
     padding: 10px;
     margin: 15px 0;
     border-radius: 10px;
