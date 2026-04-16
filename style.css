@@ -1,15 +1,116 @@
-const weddingDate = new Date("May 18, 2026 00:22:00").getTime();
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #fff, #f7f2ee);
+    text-align: center;
+    color: #2f2f2f;
+}
 
-setInterval(() => {
-    const now = new Date().getTime();
-    const diff = weddingDate - now;
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px 20px;
+}
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((diff / (1000 * 60)) % 60);
+/* Top text */
+.top-text {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 1px;
+}
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("mins").innerText = mins;
+/* Names */
+.names {
+    font-family: 'Great Vibes', cursive;
+    color: #8B0000;
+    font-size: 38px;
+    margin: 8px 0;
+}
 
-}, 1000);
+/* Heart */
+.heart {
+    color: #8B0000;
+    font-size: 18px;
+}
+
+/* Invite text */
+.invite {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* Date Box */
+.date-box {
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 15px 0;
+    background: white;
+}
+
+.date-box .big {
+    font-size: 30px;
+    color: #2f4f2f;
+    font-weight: bold;
+}
+
+/* Venue */
+.venue {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #2f4f2f;
+    font-weight: 500;
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.countdown div {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.countdown span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+/* Party */
+.party {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.yes {
+    background: #4CAF50;
+    color: white;
+}
+
+.no {
+    background: #e74c3c;
+    color: white;
+}
