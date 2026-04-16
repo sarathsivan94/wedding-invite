@@ -114,3 +114,16 @@ button {
     background: #e74c3c;
     color: white;
 }
+.flowers {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 20px;
+    animation: floatFlowers 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes floatFlowers {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(100vh);}
+}
