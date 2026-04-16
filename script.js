@@ -1,9 +1,16 @@
+document.getElementById("opening").addEventListener("click", openInvite);
+
 function openInvite() {
     document.getElementById("opening").style.display = "none";
     document.getElementById("main").style.display = "block";
-    document.getElementById("music").play();
+
+    const music = document.getElementById("music");
+    if (music) {
+        music.play().catch(() => {});
+    }
 }
 
+// Countdown
 const weddingDate = new Date("May 18, 2026 00:22:00").getTime();
 
 setInterval(() => {
@@ -17,24 +24,7 @@ setInterval(() => {
     document.getElementById("days").innerText = days;
     document.getElementById("hours").innerText = hours;
     document.getElementById("mins").innerText = mins;
-}, 1000);    font-size: 12px;
-    color: #888;
-}
-
-.names {
-    font-family: 'Great Vibes', cursive;
-    color: #8B0000;
-    font-size: 36px;
-}
-
-.heart {
-    color: gold;
-}
-
-.invite {
-    font-size: 14px;
-}
-
+}, 1000);
 /* DATE BOX */
 .date-box {
     border: 1px solid gold;
