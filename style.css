@@ -1,16 +1,15 @@
-body {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    background: #fffaf5;
-}
+const weddingDate = new Date("May 18, 2026 00:22:00").getTime();
 
-.names {
-    font-family: 'Great Vibes', cursive;
-    color: darkred;
-    font-size: 32px;
-}
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
 
-.highlight {
-    margin-top: 10px;
-    font-weight: bold;
-}
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("mins").innerText = mins;
+
+}, 1000);
