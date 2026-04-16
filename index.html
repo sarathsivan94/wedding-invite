@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <audio autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
-    </audio>
-    <div class="flowers">
-  🌸 🌼 🌸 🌺 🌸 🌼
+
+<!-- OPEN SCREEN -->
+<div id="opening" onclick="openInvite()">
+    <div class="open-box">
+        <p>Wedding Invitation</p>
+        <h1>Tap to Open</h1>
     </div>
+</div>
 
-<section class="container">
+<!-- MAIN CONTENT -->
+<div id="main" style="display:none;">
 
-    <p class="top-text">Together with their families</p>
+<audio id="music" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
 
-    <h1 class="names">Sarath Sivan</h1>
-    <span class="heart">❤</span>
-    <h1 class="names">Amritha R</h1>
+<div class="container">
 
-    <p class="invite">Request the honour of your presence</p>
+<p class="top-text">Together with their families</p>
 
-    <div class="date-box">
-        <div>APRIL</div>
-        <div class="big">18</div>
-        <div>2026</div>
-    </div>
+<h1 class="names">Sarath Sivan</h1>
+<span class="heart">❤</span>
+<h1 class="names">Amritha R</h1>
 
-    <p class="time">12:22 AM – 12:44 AM</p>
+<p class="invite">Request the honour of your presence</p>
 
+<div class="date-box">
+    <div>MAY</div>
+    <div class="big">18</div>
+    <div>2026</div>
+</div>
+
+<p class="time">12:22 AM – 12:44 AM</p>
+
+<a href="https://maps.google.com/?q=Thazhuthala+Sree+Mahaganapathy+Kshethram" target="_blank" class="venue">
+📍 Thazhuthala Sree Mahaganapathy Kshethram
+</a>
+
+<div class="countdown">
+    <div><span id="days">00</span><p>Days</p></div>
+    <div><span id="hours">00</span><p>Hours</p></div>
+    <div><span id="mins">00</span><p>Mins</p></div>
+</div>
+
+<p class="party">🎉 Bridegroom party starts at 10:00 AM</p>
+
+<div class="buttons">
+    <button class="yes">Yes, I will attend</button>
+    <button class="no">Can't make it</button>
+</div>
+
+<a href="https://wa.me/919567507527?text=I%20will%20attend%20your%20wedding" target="_blank">
+<button class="whatsapp">RSVP on WhatsApp</button>
+</a>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
     <a href="https://maps.google.com/?q=Thazhuthala+Sree+Mahaganapathy+Kshethram" target="_blank" class="venue">
 📍 Thazhuthala Sree Mahaganapathy Kshethram
     </a>
