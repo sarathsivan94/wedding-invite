@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding</title>
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<h1 class="names">Sarath Sivan</h1>
-<h2>&</h2>
-<h1 class="names">Amritha R</h1>
+<section class="container">
 
-<p>We invite you to our wedding</p>
+    <p class="top-text">Together with their families</p>
 
-<p>📅 18 May 2026</p>
-<p>⏰ 12:22 AM – 12:44 AM</p>
-<p>📍 Thazhuthala Sree Mahaganapathy Kshethram</p>
+    <h1 class="names">Sarath Sivan</h1>
+    <span class="heart">❤</span>
+    <h1 class="names">Amritha R</h1>
 
-<p class="highlight">🎉 Bridegroom party starts at 10:00 AM</p>
+    <p class="invite">Request the honour of your presence</p>
 
-<h3 id="timer"></h3>
+    <div class="date-box">
+        <div>APRIL</div>
+        <div class="big">18</div>
+        <div>2026</div>
+    </div>
 
-<button onclick="alert('Thank you!')">RSVP Yes</button>
+    <p class="time">12:22 AM – 12:44 AM</p>
+
+    <p class="venue">📍 Thazhuthala Sree Mahaganapathy Kshethram</p>
+
+    <div class="countdown">
+        <div><span id="days">00</span><p>Days</p></div>
+        <div><span id="hours">00</span><p>Hours</p></div>
+        <div><span id="mins">00</span><p>Mins</p></div>
+    </div>
+
+    <p class="party">🎉 Bridegroom party starts at 10:00 AM</p>
+
+    <div class="buttons">
+        <button class="yes">Yes, I will attend</button>
+        <button class="no">Can't make it</button>
+    </div>
+
+</section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
